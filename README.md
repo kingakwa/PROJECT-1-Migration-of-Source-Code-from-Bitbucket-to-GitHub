@@ -59,7 +59,7 @@ https://github.com/kingakwa/Mirror-and-synchronizing-akwa/blob/main/migration-bi
 
   - On Bitbucket, Create a Repository variables under Repository Settings > Pipeline > Repository variable. Naming the variable Example " BITBUCKET_VARIABLE"
     
-    ![Screen Shot 2024-01-04 at 00 39 25](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/ede419ec-4553-4dd4-adb6-649f2fe56602)
+    <img width="931" alt="Repository variable" src="https://github.com/user-attachments/assets/a8c04cce-4093-45c7-832c-b90e8e91e111" />
     
   - On Github, At the top right click on your Profile, Scroll down at the bottom click on settings
     
