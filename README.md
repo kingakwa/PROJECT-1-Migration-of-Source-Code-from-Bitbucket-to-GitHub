@@ -4,26 +4,48 @@
 
 Mirror and synchronizing GitHub & Bitbucket repository.
 
-# OBJECTIVE: Migrating your existing bitbucket repo to GitHub repo, synchronizing them in shuch a way that when ever a change is made in the source repository(Bitbucket) the same change will be replecated in GitHub without any manuel intervention.
+# OBJECTIVE: Migrating your existing bitbucket repository to GitHub repository, synchronizing them in shuch a way that when ever a change is made in the source repository(Bitbucket) the same change will be replecated in GitHub without any manuel intervention.
 https://github.com/kingakwa/Mirror-and-synchronizing-akwa/blob/main/migration-bitbucket-github.jpg
 
 #1. On GitHub, create a new repository
   - On your Bitbucket
-      Navigate to your Bitbucket repository Example "Mirroring-Repo" Create an access token under Repository settings > Security > Access tokens
+      Navigate to your Bitbucket repository Example "Mirroring-Repo" Create an access token under `Repository settings > Security > Access tokens`
       Create Repository Access Token with selecting all the "READ" Permission
       Copy the last Access token Example { "https://x-token-auth:ATCTT3xFfGN0TSG5xC5PMZex1aEWC2wMY7j1SiYTwLpR7WTpHQ4DJ1oRfevWbd-LVn9bRzmr3csDN4DEjT57KYlsxWcKXnk5zW17DLJ9ssRcOFFwegxzPTMS-MAfumre3yDmXup-z1nHb8XSRGI9N_McR6FRyHArzIoPIWiJSk6cQfYqfAkIw_w=65FC4ty63@bitbucket.org/demo-migration12/solstice_demo.git" }
     
     ![Screen Shot 2024-01-04 at 00 27 57](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/666aed90-75a8-4c57-bbe0-fe4f266ad578)
     
-      Navigate To Github and Import the Repository while keeping the same name "Mirroring-Repo"
-    
+- Navigate To Github and Import the Repository while keeping the same name "Mirroring-Repo"
+     - To navigate to GitHub and import a repository while keeping the same name "Mirroring-Repo", follow these steps:
+       
+       Step 1: Log in to GitHub
+     - Open GitHub in your browser.
+     - Sign in with your GitHub credentials.
+
+       Import a Repository
+     - Click on your profile icon in the top-right corner.
+     - Select "Your repositories" from the dropdown.
+      - Click the green "New" button and select "Import a repository" (or go directly to GitHub Importer).
+     - Enter the URL of the repository you want to import (e.g., from GitHub, GitLab, or Bitbucket).
+     - In the "Repository Name" field, type "Mirroring-Repo" to maintain the same name.
+     - Choose your preferred visibility (Public or Private).
+     - Click "Begin Import" and wait for the process to complete.
+       <img width="640" alt="importing repo" src="https://github.com/user-attachments/assets/d034d6aa-ba05-4dfe-8d3f-8091cd1b4885" />
+
+
+ 
   - On Bitbucket, Enable Pipelines under Repository settings > Pipelines > Settings
-    
-    ![Screen Shot 2024-01-04 at 00 30 21](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/bb456d6f-1f72-44c4-b2a4-7b9ef099718a)
-    
+    <img width="920" alt="enable pipeline" src="https://github.com/user-attachments/assets/702872be-05f7-499d-855a-79fc47a8ba29" />
+
   - On Bitbucket, Generate keys under Repository settings > Pipelines > SSH keys. Copy the public key to clipboard
+    <img width="918" alt="copy public key" src="https://github.com/user-attachments/assets/216bf37f-8df1-40d6-87df-00ba6ea417b6" />
+
   - On the same page, under Known hosts enter github.com as the Host address and then click Fetch followed by Add host
+    <img width="914" alt="github com" src="https://github.com/user-attachments/assets/7acf3c1b-2e88-4837-9952-4db482454f29" />
+
   - On GitHub, add the public key under Settings > Security > Deploy keys > Add deploy key. Tick the checkbox to Allow write access
+   <img width="758" alt="image" src="https://github.com/user-attachments/assets/dca749e2-21b0-4c19-a48a-c2c7d93f3266" />
+
     
     ![Screen Shot 2024-01-04 at 00 35 39](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/2545afe7-52c3-4934-a181-6a1a9b06e447)
     
@@ -31,7 +53,7 @@ https://github.com/kingakwa/Mirror-and-synchronizing-akwa/blob/main/migration-bi
     
     ![Screen Shot 2024-01-04 at 00 36 53](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/39271cf9-d5f6-4488-abe4-5fd91dcecb08)
     
-  - On Bitbucket, Create an access tokens under Repository settings > Security > Access tokens. Create Repository Access Token with  selecting all the "READ" Permission and tick the checkbox of Webhooks
+  - On Bitbucket, Create an access tokens under Repository settings > Security > Access tokens. Create Repository Access Token, give a name with selecting all the "READ" Permission and tick the checkbox of Webhooks
   - Copy the first Token Example { "ATCTT3xFfGN0TSG5xC5PMZex1aEWC2wMY7j1SiYTwLpR7WTpHQ4DJ1oRfevWbd-LVn9bRzmr3csDN4DEjT57KYlsxWcKXnk5zW17DLJ9ssRcOFFwegxzPTMS-MAfumre3yDmXup-z1nHb8XSRGI9N_McR6FRyHArzIoPIWiJSk6cQfYqfAkIw_w=65FC4ty63" }
     
    ![Screen Shot 2024-01-04 at 00 37 47](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/0af2b9ef-5063-49fa-8170-88dae0d09844)
