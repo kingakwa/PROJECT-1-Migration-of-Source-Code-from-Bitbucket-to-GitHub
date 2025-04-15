@@ -103,3 +103,4 @@ On your code replace the "$BITBUCKET_VARIABLE" and "$GITHUB_VARIABLE" with your 
 ![Screenshot 2025-02-05 064748](https://github.com/user-attachments/assets/1da1bd2b-91a2-4d83-9613-2de92369c9d3)
 
 -Any change on the main repo automatically triger and synronise with the gitHub repo.
+- Test file was created in bitbucket repo and it automatically syncronised with the gitHub repo https://github.com/kingakwa/Testing-migration
