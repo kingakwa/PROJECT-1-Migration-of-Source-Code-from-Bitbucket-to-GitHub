@@ -1,6 +1,7 @@
-# project-1-migration-of-source-code-from-Bitbucket-to-GitHub
+# project 1: MIGRATION OF SOURCE CODE FROM BITBUCKET TO GITHUB
 
 # Mirror-and-synchronizing (BITBUCKET TO GITHUB MIGRTION AND SYNCRONIZATION)
+
 Mirror and synchronizing GitHub & Bitbucket repository.
 
 # OBJECTIVE: Migrating your existing bitbucket repo to GitHub repo, synchronizing them in shuch a way that when ever a change is made in the source repository(Bitbucket) the same change will be replecated in GitHub without any manuel intervention.
