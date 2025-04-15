@@ -51,12 +51,12 @@ https://github.com/kingakwa/Mirror-and-synchronizing-akwa/blob/main/migration-bi
     
   - On Bitbucket, add the public key under Repository settings > Security > Access keys > Add key
     
-    ![Screen Shot 2024-01-04 at 00 36 53](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/39271cf9-d5f6-4488-abe4-5fd91dcecb08)
-    
+    <img width="767" alt="add access key" src="https://github.com/user-attachments/assets/4dc06e4b-4fbf-4261-a508-0ffe6d010c8f" />
+  
   - On Bitbucket, Create an access tokens under Repository settings > Security > Access tokens. Create Repository Access Token, give a name with selecting all the "READ" Permission and tick the checkbox of Webhooks
   - Copy the first Token Example { "ATCTT3xFfGN0TSG5xC5PMZex1aEWC2wMY7j1SiYTwLpR7WTpHQ4DJ1oRfevWbd-LVn9bRzmr3csDN4DEjT57KYlsxWcKXnk5zW17DLJ9ssRcOFFwegxzPTMS-MAfumre3yDmXup-z1nHb8XSRGI9N_McR6FRyHArzIoPIWiJSk6cQfYqfAkIw_w=65FC4ty63" }
     
-   ![Screen Shot 2024-01-04 at 00 37 47](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/0af2b9ef-5063-49fa-8170-88dae0d09844)
+  <img width="890" alt="image" src="https://github.com/user-attachments/assets/76d1a024-74a8-4b19-b129-26fe3d2d4cb8" />
 
   - On Bitbucket, Create a Repository variables under Repository Settings > Pipeline > Repository variable. Naming the variable Example " BITBUCKET_VARIABLE"
     
@@ -64,16 +64,17 @@ https://github.com/kingakwa/Mirror-and-synchronizing-akwa/blob/main/migration-bi
     
   - On Github, At the top right click on your Profile, Scroll down at the bottom click on settings
     
-    ![Screen Shot 2024-01-04 at 00 45 35](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/68a20ce1-ad1e-44cb-8b84-1729dbc8b212)
-    
+    <img width="919" alt="settings" src="https://github.com/user-attachments/assets/448e7095-3818-40f1-8f60-4ddbde50aeaf" />
+  
   - At the bottom left of the page click Developer Settings, Create a Personal access tokens Under Personal access tokens > Token (classic) > Generate new token > Generate new token (classic)
     
-    ![Screen Shot 2024-01-04 at 00 49 19](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/88398cca-a40f-4afd-ba11-50f2a7ee1ecf)
+    <img width="931" alt="generate a new token" src="https://github.com/user-attachments/assets/68bcfc49-7a9f-44f7-a138-130c8e678cac" />
     
   - Check the "repo" box, "Workflow" box and the "write:package" box. Genarate Token and copy the token Example "ghp_zY5GxaeytuAZlR4tPcwqovPz7c2ZVy1kdfg"
    
-    ![Screen Shot 2024-01-04 at 00 52 09](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/a0237460-df31-480e-b2df-136dab880c68)
-    
+    <img width="929" alt="githubaccess-taken" src="https://github.com/user-attachments/assets/55e25caf-5962-4a3a-b896-79561f6341cd" />
+
+  
   - On Bitbucket, Create a Repository variables with the Access Token from Github under Repository Settings > Pipeline > Repository variable. Naming the variable Example "GITHUB_VARIABLE"
 
 # Inside the Bitbucket repo, create a bitbucket-pipelines.yml file containing the following:
@@ -95,8 +96,8 @@ https://github.com/kingakwa/Mirror-and-synchronizing-akwa/blob/main/migration-bi
 On your code replace the "$BITBUCKET_VARIABLE" and "$GITHUB_VARIABLE" with your corresponding variable names while keeping the $ and the "" sign. 
 
 # Run the pipeline in Bitbucket
+-On the Bitbucket, select pipeline and select `Run piple` line at the right corner and watich the pipeline run to success with a green indication that it was successful
 
-
-![Screen Shot 2024-01-04 at 02 57 05](https://github.com/asaphdanchi/Mirror-and-synchronizing/assets/112729006/4b9e2dab-e59c-41a8-9b1f-9a09db958d75)
+<img width="953" alt="migration successful" src="https://github.com/user-attachments/assets/07c2ab89-1414-424e-9c9a-07e4d800fa7b" />
 
 
