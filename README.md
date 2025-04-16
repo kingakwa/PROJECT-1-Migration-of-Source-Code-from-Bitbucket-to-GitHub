@@ -7,11 +7,29 @@ Mirror and synchronizing GitHub & Bitbucket repository.
 # OBJECTIVE: Migrating your existing bitbucket repository to GitHub repository, synchronizing them in shuch a way that when ever a change is made in the source repository(Bitbucket) the same change will be replecated in GitHub without any manuel intervention.
 https://github.com/kingakwa/Mirror-and-synchronizing-akwa/blob/main/migration-bitbucket-github.jpg
 
-#1. On GitHub, create a new repository
-  - On your Bitbucket
-      Navigate to your Bitbucket repository Example "Mirroring-Repo" Create an access token under `Repository settings > Security > Access tokens`
-      Create Repository Access Token with selecting all the "READ" Permission
-      Copy the last Access token Example [{ "https://x-token-auth:ATCTT3xFfGN0TSG5xC5PMZex1aEWC2wMY7j1SiYTwLpR7WTpHQ4DJ1oRfevWbd-LVn9bRzmr3csDN4DEjT57KYlsxWcKXnk5zW17DLJ9ssRcOFFwegxzPTMS-MAfumre3yDmXup-z1nHb8XSRGI9N_McR6FRyHArzIoPIWiJSk6cQfYqfAkIw_w=65FC4ty63@bitbucket.org/demo-migration12/solstice_demo.git" }](https://bitbucket.org/solavisetech-migration/aws-etl-tf-python-project/src/master/)
+# Prerequisites
+Before starting, ensure you have:
+
+- A Bitbucket repository with admin access
+- A GitHub account with repository creation permissions
+- SSH and Git installed on your local machine
+- Basic knowledge of CI/CD pipelines
+
+ # Project Visualization:
+ <img width="531" alt="migration-datat center" src="https://github.com/user-attachments/assets/c691c056-8adb-43fc-94e5-14abaad501bd" />
+
+# Step-by-Step Guide
+## On GitHub, create a new empty repository
+- Go to GitHub
+- Click on New Repository
+- Do not initialize with a README file
+- Copy the repository UR
+
+ ## On your Bitbucket
+ 
+- Navigate to your Bitbucket repository Example "Mirroring-Repo" Create an access token under `Repository settings > Security > Access tokens`
+ - Create Repository Access Token with selecting all the "READ" Permission
+  - Copy the last Access token Example [{ "https://x-token-auth:ATCTT3xFfGN0TSG5xC5PMZex1aEWC2wMY7j1SiYTwLpR7WTpHQ4DJ1oRfevWbd-LVn9bRzmr3csDN4DEjT57KYlsxWcKXnk5zW17DLJ9ssRcOFFwegxzPTMS-MAfumre3yDmXup-z1nHb8XSRGI9N_McR6FRyHArzIoPIWiJSk6cQfYqfAkIw_w=65FC4ty63@bitbucket.org/demo-migration12/solstice_demo.git" }](https://bitbucket.org/solavisetech-migration/aws-etl-tf-python-project/src/master/)
      <img width="902" alt="acccess-taken 1" src="https://github.com/user-attachments/assets/58b6e78c-a18b-4d61-9d65-909456ddfdfc" />
     
 - Navigate To Github and Import the Repository while keeping the same name "Mirroring-Repo"
@@ -103,4 +121,11 @@ On your code replace the "$BITBUCKET_VARIABLE" and "$GITHUB_VARIABLE" with your 
 ![Screenshot 2025-02-05 064748](https://github.com/user-attachments/assets/1da1bd2b-91a2-4d83-9613-2de92369c9d3)
 
 -Any change on the main repo automatically triger and synronise with the gitHub repo.
-- Test file was created in bitbucket repo and it automatically syncronised with the gitHub repo https://github.com/kingakwa/Testing-migration
+
+## Test the Pipeline
+
+- Test file was created in bitbucket repo and it automatically syncronised with the gitHub repo https://github.com/kingakwa/Testing-migratio
+- Commit and push the bitbucket-pipelines.yml file to Bitbucket.
+- Navigate to Bitbucket Repository > Pipelines
+- Manually trigger the pipeline or push a change to test.
+- Verify that the repository is correctly mirrored to GitHub.
